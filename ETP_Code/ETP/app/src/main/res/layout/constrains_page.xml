@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:background="#fff"
+android:orientation="vertical"
+android:layout_height="match_parent"
+android:layoutDirection="ltr"
+android:textDirection="ltr"
+tools:context=".Constrains">
+
+<RelativeLayout
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="#00184a"
+    android:translationZ="3dp"
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:elevation="10dp"
+        android:layout_margin="15dp"
+        android:layout_centerVertical="true"
+        android:layoutDirection="ltr"
+        >
+        <ImageView
+            android:id="@+id/constrains_current_user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/ic_person"
+            android:layout_margin="0dp"
+            android:scaleType="centerCrop"
+            android:layoutDirection="ltr"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/constrains_current_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Name"
+        android:textColor="#F8C330"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/img_card"
+        android:layout_centerVertical="true"
+        android:layoutDirection="ltr"/>
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/open_ekko_chat"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ekkogif" />
+
+</RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        >
+
+
+    <ScrollView
+        android:id="@+id/setting_scroll_view"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+<LinearLayout
+    android:id="@+id/constraints_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="40dp"
+    android:layout_below="@id/header"
+    android:visibility="visible"
+    android:layout_marginTop="5dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set your constraints"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#00184a"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="#00184a"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            />
+    <EditText
+        android:id="@+id/plan_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/back_input"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Plan Name"
+        android:text=""
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="#00184a"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Start Time"
+            android:textSize="15sp"
+            android:textColor="#00184a"
+            android:layout_marginTop="17dp"
+            />
+
+        <Button
+            android:id="@+id/start_time_hour"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="Hour"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            android:layout_marginLeft="11dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=":"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#00184a"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <Button
+            android:id="@+id/start_time_min"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="Min"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            />
+        <Button
+            android:id="@+id/start_time_type"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="AM"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            android:layout_marginLeft="15dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="#00184a"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="End Time "
+            android:textSize="15sp"
+            android:textColor="#00184a"
+            android:layout_marginTop="17dp"
+
+            />
+        <Button
+            android:id="@+id/end_time_hour"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="Hour"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=":"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#00184a"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <Button
+            android:id="@+id/end_time_min"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="Min"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            />
+        <Button
+            android:id="@+id/end_time_type"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="PM"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            android:layout_marginLeft="15dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="#00184a"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            />
+        <EditText
+        android:id="@+id/budget"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/back_input"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Budget"
+        android:inputType="numberDecimal"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/preference_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Preference"
+        android:textAllCaps="false"
+        android:gravity="left|center"
+        android:textColor="#00184a"
+        android:textSize="12sp"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:background="@drawable/back_input"
+        />
+    <TextView
+        android:id="@+id/preference_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#00184a"
+        android:layout_gravity="left"
+        android:textSize="12dp" />
+    <Button
+        android:id="@+id/forbidden_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:background="@drawable/back_input"
+        android:layout_marginTop="20dp"
+        android:text="Forbidden Places"
+        android:textAllCaps="false"
+        android:gravity="left|center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="#00184a"
+        android:textSize="12sp"
+        />
+    <TextView
+        android:id="@+id/forbidden_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#00184a"
+        android:layout_gravity="left"
+        android:textSize="12dp" />
+    <Button
+        android:id="@+id/favorite_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:background="@drawable/back_input"
+        android:layout_marginTop="20dp"
+        android:text="Favorite Places"
+        android:textAllCaps="false"
+        android:gravity="left|center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="#00184a"
+        android:textSize="12sp"
+        />
+    <TextView
+        android:id="@+id/favorite_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="#00184a"
+        android:layout_gravity="left"
+        android:textSize="12dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="Note: in case of a place in your favorite list not exist in plan that means planner couldn't put it because of some reason such as (this place not working on this time, travelling time between it and other places will exceed your trip's end time,...)"
+        android:textColor="#000"
+        android:layout_gravity="left"
+        />
+    <Button
+        android:id="@+id/apply_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Apply"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        android:background="@drawable/ripple"
+        android:textColor="#F8C330"
+        android:layout_marginBottom="50dp"
+        />
+
+</LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            app:srcCompat="@drawable/ic_add_yellow_24dp"
+            app:fabSize="normal"
+            android:layout_gravity="bottom|center"
+            app:elevation="100dp"
+
+            />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_nav"
+            app:itemIconTint="@drawable/selector_nav"
+            app:menu="@menu/bottom_nav_menu"
+            android:background="@drawable/border_top"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:itemIconSize="32dp"
+            android:elevation="0dp"
+            app:labelVisibilityMode="unlabeled"
+            />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

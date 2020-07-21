@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="40dp"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set your update"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Start Time"
+            android:textSize="15sp"
+            android:textColor="#00184a"
+            android:layout_marginTop="17dp"
+
+            />
+        <EditText
+            android:id="@+id/edit_starttime_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/back_input"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="Hour"
+            android:inputType="time"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:id="@+id/edit_starttime_min"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/back_input"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="Minute"
+            android:inputType="time"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="End Time "
+            android:textSize="15sp"
+            android:textColor="#00184a"
+            android:layout_marginTop="17dp"
+
+            />
+        <EditText
+            android:id="@+id/edit_endtime_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/back_input"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="Hour"
+            android:inputType="time"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:id="@+id/edit_endtime_min"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/back_input"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="Minute"
+            android:inputType="time"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+    <!--  Email  -->
+
+    <!--    Password    -->
+
+    <TextView
+        android:id="@+id/select_place_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:background="@drawable/back_input"
+        android:layout_marginTop="20dp"
+        android:text="Edit Place"
+        android:textAllCaps="false"
+        android:gravity="left|center"
+        android:padding="15dp"
+        android:textColor="#00184a"
+        />
+
+</LinearLayout>

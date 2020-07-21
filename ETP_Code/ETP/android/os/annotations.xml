@@ -1,0 +1,5 @@
+<root>
+    <item name='android.os.Binder.ProxyTransactListener'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

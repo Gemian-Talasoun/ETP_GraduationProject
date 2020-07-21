@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6E6"
+    android:layout_gravity="left"
+    android:gravity="left"
+    tools:context=".DashboardActivity"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr">
+
+    <ProgressBar
+        android:id="@+id/dashboard_loading_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:background="@drawable/circle_background"
+        android:padding="5dp" />
+
+    <!-- ************************** Name Project ************************** -->
+    <RelativeLayout
+        android:id="@+id/txtLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#00184a"
+        android:elevation="5dp"
+        android:translationZ="3dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:elevation="10dp"
+            android:layout_margin="15dp"
+            android:layout_centerVertical="true"
+            android:layoutDirection="ltr"
+            >
+            <ImageView
+                android:id="@+id/dashboard_current_user_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_person"
+                android:layout_margin="0dp"
+                android:scaleType="centerCrop"
+                android:layoutDirection="ltr"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/dashboard_current_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textColor="#F8C330"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_card"
+            android:layout_centerVertical="true"
+            android:layoutDirection="ltr"
+            />
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/open_ekko_chat"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ekkogif" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/txtLayout"
+        android:layout_above="@+id/bottom_nav"
+        android:visibility="visible"
+        android:layoutDirection="ltr">
+
+        <RelativeLayout
+            android:id="@+id/dashboard_search"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:padding="6dp"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:layoutDirection="ltr"
+            android:elevation="5dp"
+            android:weightSum="4">
+            <EditText
+                android:id="@+id/dashboard_search_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Search ..."
+                android:inputType="text"
+                android:textSize="15sp"
+                android:background="@drawable/bg_comment"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="50dp"
+                android:layoutDirection="ltr"
+                android:layout_weight="4"
+                android:focusable="auto"/>
+            <ImageButton
+                android:layoutDirection="rtl"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/dashboard_search_button"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:padding="7dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/ripple"
+                app:srcCompat="@drawable/ic_search_black_24dp" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="ltr"
+            android:elevation="-5dp"
+            android:layout_below="@id/dashboard_search"/>
+        
+        <RelativeLayout
+            android:id="@+id/dashboard_no_plans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/dashboard_search"
+            android:orientation="vertical"
+            android:padding="@dimen/sexten"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="There are no plans on dashboard to show you."
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            app:srcCompat="@drawable/ic_add_yellow_24dp"
+            app:fabSize="normal"
+            android:layout_gravity="bottom|center"
+            app:elevation="100dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        app:itemIconTint="@drawable/selector_nav"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/border_top"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:itemIconSize="32dp"
+        android:elevation="0dp"
+        app:labelVisibilityMode="unlabeled"
+        />
+</RelativeLayout>

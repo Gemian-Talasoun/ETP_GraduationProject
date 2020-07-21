@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="ltr">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:layoutDirection="ltr">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="65dp"
+        android:elevation="10dp"
+        android:layout_centerHorizontal="true"
+        android:layoutDirection="ltr">
+
+        <ImageView
+            android:id="@+id/img_slid"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/s1"
+            android:layoutDirection="ltr"
+            />
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/stp_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Step1"
+        android:gravity="center"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:textColor="@color/yellow"
+        android:layoutDirection="ltr"/>
+
+    <TextView
+        android:id="@+id/stp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text=" implemented card view in my app, and want to put 2 different texts in it (one is 18dp, second is 9dp) in white space bellow image. "
+        android:textColor="@color/yellow"
+        android:textSize="15sp"
+        android:layoutDirection="ltr" />
+</LinearLayout>
+
+</RelativeLayout>

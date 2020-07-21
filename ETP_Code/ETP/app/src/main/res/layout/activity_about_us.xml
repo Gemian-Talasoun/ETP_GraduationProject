@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile_activities.AboutUsActivity"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    android:background="@color/whit">
+    <LinearLayout
+        android:id="@+id/about_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:translationZ="3dp"
+        android:layoutDirection="ltr">
+        <ImageView
+            android:id="@+id/about_back_to_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp"
+            android:padding="15dp"
+            android:clickable="true"
+            android:background="@drawable/ripple"
+            android:layoutDirection="ltr" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textColor="#fff"
+            android:padding="15dp"
+            android:layoutDirection="ltr"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/sexten">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo1"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo18"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Electronic Tour Planner"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The problem of trip planning has received wide concerns in recent years. More and more people require the service of automatically confirming the optimal tour route. When users assign the source and the destination, and the time limit of the tour, how can automatically make schedule help user to visit point of intetrets Correspond to his preferences."
+                    android:layout_marginBottom="16dp"/>
+                <TextView
+                    android:layout_marginTop="@dimen/eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Version 1.01"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    android:background="#EEE">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#00184a"
+        android:orientation="horizontal"
+        android:translationZ="3dp"
+        android:layoutDirection="ltr"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:elevation="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layoutDirection="ltr"
+            >
+            <ImageView
+                android:id="@+id/showPlan_current_user_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/my"
+                android:layout_margin="0dp"
+                android:scaleType="centerCrop"
+                android:layoutDirection="ltr"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/plan_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plan Name"
+            android:textColor="#FFF"
+            android:layout_toLeftOf="@+id/save_plan"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center|center_horizontal"
+            android:layoutDirection="ltr"
+            />
+        <ImageButton
+            android:id="@+id/save_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_check_black_24dp"
+            android:layout_toLeftOf="@+id/add_poi"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="#00184a"
+            />
+
+        <ImageButton
+            android:id="@+id/add_poi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="#00184a"
+            app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/min_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@color/whit"
+        >
+
+            <Button
+                android:id="@+id/place1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:background="@drawable/back_input"
+                android:textAllCaps="false"
+                android:text="Place 1"
+                android:textColor="#00184a"
+                android:textSize="10sp"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="11dp"
+                android:layout_gravity="left"
+                />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/ic_timer_black_24dp" />
+                    <TextView
+                        android:id="@+id/travel_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:layout_gravity="center"
+                        android:textColor = "#F8C330"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Minutes"
+                        android:layout_gravity="center"
+                        android:textColor = "#F8C330"/>
+
+        <Button
+            android:id="@+id/place2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:background="@drawable/back_input"
+            android:text="Place 1"
+            android:textColor="#00184a"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_gravity="right"
+            />
+
+    </LinearLayout>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycleview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/min_time_layout"
+    android:paddingTop="10dp"
+    android:background="@color/whit"
+    android:layout_marginBottom="70dp">
+
+</androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="25dp"
+            app:elevation="100dp"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_add_yellow_24dp"
+
+            />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/border_top"
+            android:elevation="0dp"
+            app:itemIconSize="32dp"
+            app:itemIconTint="@drawable/selector_nav"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_nav_menu" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

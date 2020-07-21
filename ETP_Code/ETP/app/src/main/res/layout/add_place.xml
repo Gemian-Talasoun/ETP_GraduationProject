@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="20dp"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="40dp"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add anothor place"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <!--  Email  -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Start Time"
+            android:textSize="15sp"
+            android:textColor="#00184a"
+            android:layout_marginTop="11dp"
+
+            />
+        <Button
+            android:id="@+id/add_starttime_hour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="H"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            android:layout_marginLeft="11dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=":"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#00184a"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <Button
+            android:id="@+id/add_starttime_min"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="M"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/add_starttime_part"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="AM"
+            android:textSize="15sp"
+            android:textColor="#00184a"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            />
+        <Spinner
+            android:id="@+id/add_starttime_part_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="End Time "
+            android:textSize="15sp"
+            android:textColor="#00184a"
+            android:layout_marginTop="11dp"
+
+            />
+        <Button
+            android:id="@+id/add_endtime_hour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="H"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            android:layout_marginLeft="11dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=":"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#00184a"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <Button
+            android:id="@+id/add_endtime_min"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_comment"
+            android:gravity="center"
+            android:text="M"
+            android:textColor="#00184a"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/add_endtime_part"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="AM"
+            android:textSize="15sp"
+            android:textColor="#00184a"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            />
+        <Spinner
+            android:id="@+id/add_endtime_part_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/select_place_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:background="@drawable/back_input"
+        android:layout_marginTop="50dp"
+        android:text="Add Place"
+        android:textAllCaps="false"
+        android:gravity="left|center"
+        android:padding="15dp"
+        android:textColor="#00184a"
+        />
+    <TextView
+        android:id="@+id/select_place_Num_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:background="@drawable/back_input"
+        android:layout_marginTop="20dp"
+        android:text="Add Place Number"
+        android:textAllCaps="false"
+        android:gravity="left|center"
+        android:padding="15dp"
+        android:textColor="#00184a"
+        />
+
+</LinearLayout>

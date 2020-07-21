@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    tools:context=".PlacesActivity">
+
+    <ProgressBar
+        android:id="@+id/places_loading_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:translationZ="3dp"
+        android:layoutDirection="ltr"
+        android:layout_above="@id/bottom_nav">
+        <RelativeLayout
+            android:id="@+id/places_user_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#00184a"
+            android:translationZ="3dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/img_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:elevation="10dp"
+                android:layout_margin="15dp"
+                android:layout_centerVertical="true"
+                android:layoutDirection="ltr">
+                <ImageView
+                    android:id="@+id/places_current_user_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/ic_person"
+                    android:layout_margin="0dp"
+                    android:scaleType="centerCrop"
+                    android:layoutDirection="ltr" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/places_current_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                android:textColor="#F8C330"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/img_card"
+                android:layout_centerVertical="true"
+                android:layoutDirection="ltr" />
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/open_ekko_chat"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ekkogif" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/places_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/places_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="ltr"
+            android:paddingBottom="20dp"/>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        app:srcCompat="@drawable/ic_add_yellow_24dp"
+        app:fabSize="normal"
+        android:layout_gravity="bottom|center"
+        app:elevation="100dp"
+
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        app:itemIconTint="@drawable/selector_nav"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/border_top"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:itemIconSize="32dp"
+        android:elevation="0dp"
+        app:labelVisibilityMode="unlabeled"
+        />
+</RelativeLayout>
